@@ -33,7 +33,7 @@ cp rak2245/packet_forwarder /opt/ttn-gateway/ -rf
 cp ./update_gwid.sh /opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/update_gwid.sh
 cp ./start.sh  /opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/start.sh
 cp ./set_eui.sh  /opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/set_eui.sh
-cp ttn-gateway.service /lib/systemd/system/ttn-gateway.service
+#cp ttn-gateway.service /lib/systemd/system/ttn-gateway.service
 cp /opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/global_conf/global_conf.eu_863_870.json \
 	/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/global_conf.json
 	
@@ -43,7 +43,7 @@ if [ $rpi_model -eq 3 ] || [ $rpi_model -eq 4 ]; then
 	/opt/ttn-gateway/packet_forwarder/lora_pkt_fwd/global_conf.json
 fi
 
-systemctl enable ttn-gateway.service
+#systemctl enable ttn-gateway.service
 
 echo
 echo "LoRa Install Success!"
