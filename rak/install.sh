@@ -3,16 +3,6 @@
 # Stop on the first sign of trouble
 set -e
 
-SCRIPT_COMMON_FILE=$(pwd)/../rak/rak/shell_script/rak_common.sh
-
-
-source $SCRIPT_COMMON_FILE
-
-if [ $UID != 0 ]; then
-    echo "Operation not permitted. Forgot sudo?"
-    exit 1
-fi
-
 systemctl disable hciuart
 
 apt install git ppp dialog jq minicom monit i2c-tools -y
@@ -23,4 +13,6 @@ cp rak /usr/local/ -rf
 
 rm -rf /usr/local/rak/first_boot
 
-echo_success "Copy Rak file success!"
+echo
+echo "RAK Install Success!"
+echo
